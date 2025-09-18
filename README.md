@@ -1,4 +1,32 @@
 # Flask-SQLAlchemy Validations Lab
+This project is a blog platform backend built with Flask and SQLAlchemy. The goal of this lab is to strengthen data integrity by adding attribute-level validations to the 'Author' and 'Post' models. These validations enforce business rules to prevent invalid or poorly formatted data from being stored in the database.
+
+## Features:
+- Authors must have a unique, non-empty name.
+- Author phone numbers must be exactly 10 digits.
+- Posts require content with a minimum length of 250 characters.
+- Post summaries must be 250 characters or fewer.
+- Post categories are restricted to "Fiction" or "Non-Fiction".
+- Post titles must contain one of the specified clickbait phrases.
+
+## Setup:
+1. Create and activate the virtual environment via:
+    pipenv install
+    pipenv shell
+2. Navigate to the server folder via:
+    cd server
+3. Apply the database migrations via:
+    flask db upgrade
+4. Seed the database with initial data via:
+    python seed.py
+
+## Testing:
+Run the test suite with pytest to verify validations via:
+    pytest
+
+
+---------------------------------------
+
 
 ## Scenario
 
